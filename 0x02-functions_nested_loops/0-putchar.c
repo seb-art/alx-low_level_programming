@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- *main - this is an entry point to the program
+ *main.h - code entry point
  *description : prints putchar follows by a new line
- *Return : return 0 when successful
+ *Return: 0
  */
 
 int main(void)
