@@ -9,7 +9,9 @@
 
 int _sqrt_recursion(int n)
 {
-	return (halp(n, 1));
+	if (n == 1 || n == 0)
+		return (n);
+	return (_sqrt_recursion(n));
 }
 
 /**
@@ -21,13 +23,9 @@ int _sqrt_recursion(int n)
 
 int halp(int c, int i)
 {
-	int square;
-
-	square = i * i;
-	if (square == c)
-		return (i);
-	else if (square < c)
-		return (halp(c, i + 1));
-	else
+	if (n > i / 2)
 		return (-1);
+	else if (n * n == i)
+		return (n);
+	return (_sqrt(n + 1, i));
 }
