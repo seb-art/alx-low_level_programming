@@ -1,47 +1,34 @@
 #include <stdio.h>
+
 /**
- * main - outputs first 50
- * fibonacci nums
- * Return: return 0
+ * main - main block
+ * Description: Print the first 50 fibonacci numbers, starting with 1 and 2.
+ * Numbers must be coma and space separated.
+ * Return: 0
  */
 int main(void)
 {
-	int t;
-	unsigned long n1 = 0, n2 = 1, n3;
+	int count = 2;
+	long int i = 1, j = 2;
+	long int k;
 
-	for (t = 0; t < 50; t++)
+	printf("%lu, ", i);
+	while (count <= 50)
 	{
-		n3 = n1 + n2;
-		printf("%lu", n3);
-		n1 = n2;
-		n2 = n3;
-	if (t == 49)
-		printf("\n");
-	else
-		printf(", ");
-	}
-	return (0);
-}#include <stdio.h>
-/**
- * main - outputs first 50
- * fibonacci nums
- * Return: return 0
- */
-int main(void)
-{
-	int t;
-	unsigned long n1 = 0, n2 = 1, n3;
+		if (count == 50)
+		{
+			printf("%lu\n", j);
+		}
+		else
+		{
+			printf("%lu, ", j);
+		}
 
-	for (t = 0; t < 50; t++)
-	{
-		n3 = n1 + n2;
-		printf("%lu", n3);
-		n1 = n2;
-		n2 = n3;
-	if (t == 49)
-		printf("\n");
-	else
-		printf(", ");
+		k = j;
+		j += i;
+		i = k;
+		count++;
 	}
+
 	return (0);
 }
