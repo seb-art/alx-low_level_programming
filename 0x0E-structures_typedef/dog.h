@@ -1,21 +1,27 @@
-#ifndef DOG_H
-#define DOG_H
+#ifndef STRUCT_DOG_H
+#define STRUCT_DOG_H
+
 /**
-* struct dog - Each dog has the following
-*@name: name of dog
-*@age: age of dog
-*@owner: owner name
-*/
+ * struct dog - UDT for for a typical dog
+ * @name: name the dog
+ * @age: age
+ * @owner: owner person's name
+ */
 struct dog
 {
-char *name;
-float age;
-char *owner;
+	char *name;
+	float age;
+	char *owner;
 };
+
 void init_dog(struct dog *d, char *name, float age, char *owner);
-void print_dog(struct dog *d);
+void print_dog(struct dog *ptr);
+
+/**
+ * dog_t - typedef to alias dog
+ */
 typedef struct dog dog_t;
 dog_t *new_dog(char *name, float age, char *owner);
-int _strlen(char *s);
 void free_dog(dog_t *d);
-#endif
+
+#endif /* DOG_H; struct dog */
