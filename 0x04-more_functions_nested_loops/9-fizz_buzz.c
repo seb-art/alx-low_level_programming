@@ -1,28 +1,34 @@
-#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * main - mainn entry point, solves fizz buzz from 1 to 100
- * Description: Multiples of 3, print Fizz. Multiples of 5, print Buzz
- * Multiples of both 3 and 5 should print FizzBuzz
- * Return: 0
+ * main - start of program
+ *
+ * prints Fizz for multiples of 3
+ * pritns Buzz for multiples of 5
+ * prints FizzBuzz for multiples of 5 & 3
+ *
+ * Return: Always 0 ()success
  */
-
 int main(void)
 {
-	int j;
+	int i;
+	char f[] = "Fizz";
+	char b[] = "Buzz";
+	char fb[] = "FizzBuzz";
 
-	for (j = 1; j <= 100; j++)
+	for (i = 1; i <= 100; i++)
 	{
-		if (j % 3 == 0 && j % 5 == 0)
-			printf("FizzBuzz");
-		else if (j % 3 == 0)
-			printf("Fizz");
-		else if (j % 5 == 0)
-			printf("Buzz");
-		else if (j == 1)
-			printf("%d", j);
+		if (i == 100)
+			printf("%s", b);
+		else if ((i % 3 == 0) && (i % 5 == 0))
+			printf("%s ", fb);
+		else if (i % 3 == 0)
+			printf("%s ", f);
+		else if (i % 5 == 0)
+			printf("%s ", b);
 		else
-			printf("%d", j);
+			printf("%d ", i);
 	}
 	printf("\n");
 
